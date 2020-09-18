@@ -17,10 +17,11 @@ def fetchdata(**kwargs):
         print("State does not exists")
     else:
         #print(case)
-        print(case[state]["state"])
-    if "para" in kwargs:
-        value=kwargs["para"]
-        print(case[state][value])
+        #print(case[state])
+        if "para" in kwargs:
+            value=kwargs["para"]
+            print(case[state][value])
 
 state=input("state")
-fetchdata(state=(state),para="death")
+parameter=input("parameter")
+fetchdata(state=(state),para=(parameter))
